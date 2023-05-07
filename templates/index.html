@@ -1,4 +1,40 @@
-<h1> isso aq e so a tag h1 so um tetes </h1>
-<br>
-<h2>agr isso aq ta rodando no flask</h2>
-<h2>usando render_template</h2>
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="shortcut icon" href="../static/images/check.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style_index.css">
+</head>
+<body>
+
+<section class="title">
+    <h1> ToDo Flask App</h1>
+</section>
+
+<div class="container">
+    <section>
+        <form method="post" action="{{ url_for('add_task') }}">
+            <p class="p_form" >
+            <textarea cols="20" rows="4" maxlength="100" placeholder="max - 100" autofocus required class="class_textarea"
+                      name="name_textarea" id="id_textarea"></textarea>
+            </p>
+
+            <p class="p_form" >
+                <input type="submit" value="add">
+            </p>
+        </form>
+    </section>
+</div>
+
+{% for item in query %}
+<section class="section_query">
+    <p class="p_query" >
+        - {{ item.task_text}}
+        <a href="/delete/{{ item.task_id }}">delete</a>
+    </p>
+</section>
+{% endfor %}
+
+</body>
+</html>
