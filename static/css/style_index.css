@@ -66,6 +66,7 @@ input:hover{
     cursor: pointer;
 }
 
+
 .section_query{
     margin-left: 40px;
     margin-right: 40px;
@@ -79,6 +80,7 @@ input:hover{
     border-radius: 8px;
     padding: 8px;
     padding-left: 20px;
+    font-size: 1em;
 }
 
 
