@@ -64,5 +64,10 @@ def delete(number):
     return redirect('/')
 
 
+@app.errorhandler(404)
+def error_404(e):
+    return render_template('404.html'), 404
+
+
 if __name__ == '__main__':
     app.run(debug=True)
