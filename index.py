@@ -4,12 +4,12 @@ from sqlalchemy import create_engine, Column, Integer, String, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:eHr9fnsWdoa7lhIgcTd4@containers-us-west-176.railway.app/railway?6587'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:XYwWDEPmb53sQD3ezUeH@containers-us-west-35.railway.app/railway?6471'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False     #default é True
 db = SQLAlchemy(app)
 
-engine = create_engine('mysql+pymysql://root:eHr9fnsWdoa7lhIgcTd4@containers-us-west-176.railway.app/railway?6587', echo=True, query_cache_size=0,
-                       connect_args=dict(host='containers-us-west-176.railway.app', port=6587))
+engine = create_engine('mysql+pymysql://root:XYwWDEPmb53sQD3ezUeH@containers-us-west-35.railway.app/railway?6471', echo=True, query_cache_size=0,
+                       connect_args=dict(host='containers-us-west-35.railway.app', port=6471))
 #mysql -hcontainers-us-west-35.railway.app -uroot -pXYwWDEPmb53sQD3ezUeH --port 6471 --protocol=TCP railway
 #mysql+pymysql://root:felipe008@localhost/flask_zero
 #mysql://user:password@host/database
